@@ -1,5 +1,8 @@
 # CommandMap Design Pattern - Behavioral
 
+[![Build Status](https://travis-ci.org/vicboma1/CommandMapper.svg?branch=master)](https://travis-ci.org/vicboma1/CommandMapper) [![Coverage Status](https://coveralls.io/repos/vicboma1/CommandMapper/badge.svg?branch=master&service=github)](https://coveralls.io/github/vicboma1/CommandMapper?branch=master) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vicboma1/commandmapper/trend.png)](https://bitdeli.com/free "Bitdeli Badge")[![Analytics](https://ga-beacon.appspot.com/UA-68658653-1/injector/readme)](https://github.com/igrigorik/ga-beacon)
+
+
 The CommandMapper class implements a domain specific language (DSL) with next interfaces:
 
 ```java
@@ -9,7 +12,7 @@ CommandDictionary
 CommandExecutable
 CommandUnmapper
 ```
-which provides one method for mapping commands and they are run  asynchronously or synchronously.
+which provides one method for mapping commands and they are run asynchronously or synchronously.
 
 #Manual
 
@@ -33,7 +36,7 @@ commandMapper.addCommand(command,runnable);
 Add Command Callable<T>
 ```java
 final String command = "commandCalable";
-final Callable<T> callable = (Callable<T>) () -> { ...  return true; };
+final Callable<T> callable = (Callable<T>) () -> { ...  return (T)... ; };
 commandMapper.addCommand(command,callable);
 ```
 
@@ -65,7 +68,4 @@ Register Commands
 final int size = commandMapper.size();
 ```
 
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vicboma1/commandmapper/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
